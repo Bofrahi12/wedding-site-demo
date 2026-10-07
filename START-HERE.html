@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wedding Website Template — Editing & Publishing Guide</title>
+<style>
+  body{font-family:Georgia,serif;color:#3F3B34;background:#FAF7F0;margin:0;line-height:1.75}
+  .wrap{max-width:720px;margin:0 auto;padding:3rem 1.5rem 5rem}
+  h1{font-size:2.2rem;margin-bottom:.2rem} h2{font-size:1.5rem;color:#4A5A43;margin-top:2.6rem;
+    border-bottom:2px solid #B9975B;padding-bottom:.4rem}
+  .sub{color:#8A8177;font-style:italic;margin-bottom:2rem}
+  code{background:#F1ECE0;padding:.15rem .5rem;border-radius:6px;font-size:.92em}
+  pre{background:#3F3B34;color:#F5F1E6;padding:1.1rem 1.3rem;border-radius:12px;overflow-x:auto;font-size:.88rem}
+  .step{background:#fff;border:1px solid #E7DFD0;border-radius:14px;padding:1.2rem 1.4rem;margin:1rem 0}
+  .step b.num{display:inline-block;background:#7C8B6F;color:#fff;width:30px;height:30px;border-radius:50%;
+    text-align:center;line-height:30px;margin-right:.6rem}
+  .warn{background:#FFF8E7;border:1px solid #B9975B;border-radius:12px;padding:1rem 1.3rem;margin:1.2rem 0}
+  a{color:#9A7B45}
+</style>
+</head>
+<body><div class="wrap">
+
+<h1>🤍 Your Wedding Website — Guide</h1>
+<p class="sub">Editing &amp; publishing, step by step. No coding experience needed.</p>
+
+<h2>1. What's in your ZIP</h2>
+<div class="step"><b class="num">📁</b><code>index.html</code> — all the text on your site (names, dates, story…)<br>
+<b class="num">🎨</b><code>styles.css</code> — colors and fonts<br>
+<b class="num">⚙️</b><code>script.js</code> — countdown date + your RSVP email<br>
+<b class="num">🖼️</b><code>images/</code> — the photos (replace with yours)</div>
+
+<h2>2. Preview it first</h2>
+<div class="step"><b class="num">1</b>Unzip the folder.<br>
+<b class="num">2</b>Double-click <code>index.html</code> — it opens in your browser. That's your site!</div>
+
+<h2>3. Make it yours</h2>
+<div class="step"><b class="num">A</b><b>Names, dates, story</b> — open <code>index.html</code> in any text editor (Notepad, TextEdit).
+Search for <code>Sophia</code> and replace with your names, <code>June 12, 2027</code> with your date, and rewrite the story paragraphs. Save.</div>
+<div class="step"><b class="num">B</b><b>Photos</b> — put your photos in the <code>images/</code> folder and rename them
+<code>couple.webp</code> and <code>venue.webp</code> (or any .jpg — then update the two file names inside <code>index.html</code>).</div>
+<div class="step"><b class="num">C</b><b>Colors</b> — open <code>styles.css</code>, find the <code>:root</code> block at the top and change the color codes, e.g. <code>--sage:#7C8B6F</code>.</div>
+<div class="step"><b class="num">D</b><b>Countdown date</b> — open <code>script.js</code>, find <code>2027-06-12T16:30:00</code> and set your wedding date &amp; time.</div>
+
+<h2>4. Get RSVPs in your email ★ important</h2>
+<div class="step"><b class="num">1</b>In <code>script.js</code>, find <code>const RSVP_EMAIL = "youremail@example.com"</code> and put <b>your</b> email address between the quotes. Save.<br>
+<b class="num">2</b>Open <code>index.html</code> in your browser, fill in the RSVP form once with a test reply and submit.<br>
+<b class="num">3</b>Check your inbox — you'll get an <b>activation email</b> from FormSubmit. Click the activation link.<br>
+<b class="num">4</b>Done! Every guest RSVP now arrives straight in your inbox. (Free — no account needed.)</div>
+
+<h2>5. Publish it free (5 minutes)</h2>
+<div class="step"><b class="num">1</b>Go to <a href="https://app.netlify.com/drop">app.netlify.com/drop</a>.<br>
+<b class="num">2</b>Drag your unzipped website folder onto the page.<br>
+<b class="num">3</b>Netlify gives you a free link like <code>your-names.netlify.app</code> — rename it if you like.<br>
+<b class="num">4</b>Share that link with your guests! (Want your own domain? Netlify → Domain settings.)</div>
+<div class="warn">📱 <b>Tip:</b> open your published link on your phone — 80% of guests will view it there. Everything is mobile-friendly.</div>
+
+<h2>6. FAQ</h2>
+<p><b>Can I change the fonts?</b> Yes — the fonts load from Google Fonts at the top of <code>index.html</code>; swap the names.</p>
+<p><b>Can I remove a section?</b> Yes — each section in <code>index.html</code> is clearly labeled (<code>&lt;!-- STORY --&gt;</code> etc.). Delete the block you don't need.</p>
+<p><b>Something broke?</b> Re-download your original ZIP from Etsy and start that step over — you can't break anything permanently.</p>
+
+<p class="sub" style="margin-top:3rem">Questions? Message me on Etsy — I answer within 24 hours.<br>💌 <i>Wishing you a lifetime of love and laughter.</i></p>
+
+</div></body></html>

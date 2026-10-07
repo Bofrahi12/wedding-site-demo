@@ -29,10 +29,25 @@ document.querySelectorAll('.acc button').forEach(btn=>{
   });
 });
 
-// RSVP demo submit
+// RSVP → responses are emailed to the couple via FormSubmit (free).
+// ★ BUYER: replace the address below with your own email, then submit the
+// form once yourself — FormSubmit will email you an activation link. Click it
+// and every guest RSVP after that lands straight in your inbox. No account,
+// no server, no coding.
+const RSVP_EMAIL = "youremail@example.com";
 document.getElementById('rsvp-form').addEventListener('submit', e=>{
   e.preventDefault();
-  e.target.classList.add('hidden');
-  document.getElementById('rsvp-done').classList.remove('hidden');
-  document.getElementById('rsvp-done').scrollIntoView({behavior:'smooth',block:'center'});
+  const form = e.target;
+  const done = ()=>{
+    form.classList.add('hidden');
+    document.getElementById('rsvp-done').classList.remove('hidden');
+    document.getElementById('rsvp-done').scrollIntoView({behavior:'smooth',block:'center'});
+  };
+  const data = Object.fromEntries(new FormData(form).entries());
+  data._subject = "💒 New wedding RSVP!";
+  fetch("https://formsubmit.co/ajax/" + RSVP_EMAIL, {
+    method: "POST",
+    headers: {"Content-Type": "application/json", "Accept": "application/json"},
+    body: JSON.stringify(data)
+  }).catch(()=>{}).finally(done);
 });
